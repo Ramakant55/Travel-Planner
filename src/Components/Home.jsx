@@ -6,18 +6,14 @@ const Home = () => {
     <div className="min-h-screen bg-white">
       <nav className="bg-white shadow-md py-4">
         <div className="container mx-auto flex items-center justify-between px-4">
-          <div className="text-orange-500 font-bold text-2xl">Travel Planner</div>
-          <div className="hidden md:flex items-center space-x-6">
-            <Link to="/" className="text-gray-700 hover:text-orange-500">Home</Link>
-            <Link to="/AllTours" className="text-gray-700 hover:text-orange-500">Travel Guides</Link>
-            <Link to="/hotels" className="text-gray-700 hover:text-orange-500">Hotels</Link>
+          <div className="text-orange-500 font-bold text-2xl transition-transform duration-300 ease-in-out hover:scale-150">Travel Planner</div>
+          <div className="hidden md:flex items-center space-x-10 text-xl font-bold">
+            <Link to="/" className="text-gray-700 hover:text-orange-500  transform transition ease duration-300 hover:translate-x-[-8px]">Home</Link>
+            <Link to="/AllTours" className="text-gray-700 hover:text-orange-500  transform transition duration-300 hover:translate-x-[-8px]">Travel Guides</Link>
+            <Link to="/hotels" className="text-gray-700 hover:text-orange-500 transform transition duration-300 hover:translate-x-[-8px]">Hotels</Link>
           </div>
           <div className="hidden md:flex items-center space-x-4">
-            <input
-              type="text"
-              placeholder="Explore by destination"
-              className="border border-gray-300 rounded-full px-4 py-1 focus:outline-none focus:ring focus:ring-orange-200"
-            />
+
             <Link to="/login" className="text-gray-700 hover:text-orange-500">Login</Link>
             <Link to="/signup" className="bg-orange-500 text-white py-1 px-4 rounded-full hover:bg-orange-600">
               Sign Up

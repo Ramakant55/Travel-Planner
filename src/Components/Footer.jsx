@@ -13,15 +13,15 @@ const Footer = () => {
             <span className="text-orange-500">Planner</span>
           </h1>
           <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Commodi, enim.</p>
-          <div className="flex space-x-4">
-  <FaYoutube className="text-orange-500 text-2xl cursor-pointer transform transition ease duration-300 hover:translate-y-[-4px]" />
-  <FaTwitter className="text-orange-500 text-2xl cursor-pointer transform transition ease duration-300 hover:translate-y-[-4px]" />
-  <FaFacebook className="text-orange-500 text-2xl cursor-pointer transform transition ease duration-300 hover:translate-y-[-4px]" />
-  <FaInstagram className="text-orange-500 text-2xl cursor-pointer transform transition ease duration-300 hover:translate-y-[-4px]" />
+          <div className="flex space-x-4 text-orange-500 text-2xl cursor-pointer">
+  <FaYoutube className="transform transition ease duration-300 hover:translate-y-[-4px] " />
+  <FaTwitter className=" transform transition ease duration-300 hover:translate-y-[-4px]" />
+  <FaFacebook className=" transform transition ease duration-300 hover:translate-y-[-4px]" />
+  <FaInstagram className=" transform transition ease duration-300 hover:translate-y-[-4px]" />
 </div>
 
           <p className="text-sm">
-            © 2024 <a href="#" className="text-orange-500">Mukesh_Verma</a>. All Rights Reserved
+            © 2024 <a href="#" className="text-orange-500">Travel Planner</a>. All Rights Reserved
           </p>
         </div>
 

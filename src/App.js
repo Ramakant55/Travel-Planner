@@ -8,7 +8,6 @@ import FeaturesSection from './Components/FeaturesSection';
 import PromoSection from './Components/PromoSection';
 import Try from './Components/Try';
 import TripPlanner from './Components/TripPlanner';
-import AllTours from './Components/AllTours';
 import Footer from './Components/Footer';
 
 function App() {
@@ -17,17 +16,15 @@ function App() {
     <Router>
       <Home/>
        <Routes>
-     <Route path='alltours' element={<AllTours/>}/>
          <Route path='login' element={<Login/>}/>
          <Route path='signup' element={<Signup/>}/>
       </Routes>
-    <Try/>
-     </Router>
     <TripPlanner/> 
+     </Router>
+    <Try/>
     <FeaturesSection/>
     <PromoSection/> 
     <Footer/>
-
     </>
   );
 }

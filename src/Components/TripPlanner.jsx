@@ -48,12 +48,13 @@ const TravelPlanner = () => {
   return (
     <div>
     <div
-      className="min-h-screen bg-cover bg-center text-white"
-        style={{ background:"url('')",}}
+      className=" bg-cover bg-center text-white"
+      
       >
     
       {/* Hero Section */}
-      <div className="h-96 flex flex-col justify-center items-center text-center bg-black bg-opacity-50">
+      <div className="h-72 -mt-44 flex flex-col justify-center items-center text-center bg-opacity-50 bg-black shadow-black shadow-md"
+    >
         <h1 className="text-4xl font-bold mb-4">
           Journey to Explore {location || 'World'}
         </h1>
@@ -63,7 +64,7 @@ const TravelPlanner = () => {
       </div>
 
       {/* Input & Weather Section */}
-      <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg -mt-16 relative text-gray-800">
+      <div className="max-w-4xl mx-auto p-6 bg-blue-200 shadow-md shadow-black rounded-lg -mt-16 relative text-gray-800">
         {/* Location Input */}
         <div className="text-center mb-6">
           <input
@@ -91,28 +92,12 @@ const TravelPlanner = () => {
       </div>
     </div>
 
-    <div className="relative w-full h-96 -mt-32">
-    {/* Background Image */}
-    <div
-      className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
-      style={{
-        backgroundImage: "url('')",
-        filter: "brightness(0.5)",
-      }}
-    ></div>
+    <div className="w-full h-96 -mt-32">
 
     {/* Content */}
-    <div className="relative z-10 text-center text-white flex flex-col justify-center items-center h-full px-4">
-      <h1 className="text-5xl font-bold mb-4 ">JOURNEY TO</h1>
-      <h2 className="text-4xl font-bold mb-4 ">EXPLORE WORLD</h2>
-      <p className="mb-8 max-w-2xl ">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s.
-      </p>
-
+    <div className="text-center text-white flex flex-col justify-center items-center mt-40 px-4">
       {/* Search Box */}
-      <div className="bg-white text-gray-700 p-4 rounded-lg shadow-md w-full max-w-4xl flex justify-between items-center">
+      <div className="bg-blue-200 text-gray-700 p-4 rounded-lg shadow-md shadow-black w-full max-w-4xl flex justify-between items-center">
         <div className="flex flex-1 flex-col px-2">
           <label className="text-sm font-medium">Location</label>
           <input
@@ -145,14 +130,14 @@ const TravelPlanner = () => {
             <option>4 Guests</option>
           </select>
         </div>
-        <button className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-md font-medium">
+        <button className="bg-red-500  transform transition ease duration-300 hover:translate-y-[-4px] hover:bg-red-600 text-white px-3 py-2 mt-5 rounded-md font-medium">
           Search
         </button>
       </div>
     </div>
 
     {/* Features Section */}
-    <div className="relative z-10 bg-white py-12 px-4 md:px-16 flex justify-between">
+    <div className="relative z-10 py-12 px-4 md:px-16 flex justify-between">
       {/* Feature 1 */}
       <div className="text-center flex-1">
         <div className="text-red-500 text-5xl mb-4">🌴</div>
@@ -190,8 +175,7 @@ const TravelPlanner = () => {
       </div>
     </div>
   </div>
-);
-};
+
     </div>
   );
 };
