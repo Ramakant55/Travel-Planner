@@ -3,7 +3,6 @@ import { Route,BrowserRouter as Router, Routes } from 'react-router-dom';
 import Home from './Components/Home';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
-import Hell from './Components/Hell';
 import FeaturesSection from './Components/FeaturesSection';
 import PromoSection from './Components/PromoSection';
 import Try from './Components/Try';
