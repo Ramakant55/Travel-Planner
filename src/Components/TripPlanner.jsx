@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const TravelPlanner = () => {
   const [location, setLocation] = useState('');
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(false);
-
+  const navigate = useNavigate(); // Initialize navigate
   // Fetch weather data dynamically based on location
   const fetchWeather = async (city) => {
     if (!city) return;
@@ -44,6 +45,14 @@ const TravelPlanner = () => {
       fetchWeather(location);
     }
   }, [location]);
+
+  const handleSearch = () => {
+    if (location) {
+      navigate('/hotels', { state: { location } }); // Navigate with location data
+    } else {
+      alert('Please enter a location to search for hotels.');
+    }
+  };
 
   return (
     <div>
@@ -128,7 +137,8 @@ const TravelPlanner = () => {
             <option>4 Guests</option>
           </select>
         </div>
-        <button className="bg-red-500 transform transition ease duration-300 hover:translate-y-[-4px] hover:bg-red-600 text-white px-3 py-2 mt-5 rounded-md font-medium">
+        <button className="bg-red-500 transform transition ease duration-300 hover:translate-y-[-4px] hover:bg-red-600 text-white px-3 py-2 mt-5 rounded-md font-medium"
+         onClick={handleSearch}>
           Search
         </button>
       </div>
