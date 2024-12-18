@@ -9,9 +9,9 @@ const Try = () => {
   ];
 
   return (
-    <div className="">
+    <div className="md:mt-0 mt-[40rem]">
       {/* Top Destination Section */}
-      <section className="tours_section">
+      <section className="tours_section p-5">
         <div className="container mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-800">
@@ -41,7 +41,7 @@ const Try = () => {
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-800">Photo Gallery</h1>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-5">
             <img
               className="shadow-black shadow-md h-56 transition-transform duration-300 ease-in-out hover:scale-125"
               src="https://th.bing.com/th/id/OIP.aVtfigX2nC5O2Q5b63VfTQHaEo?rs=1&pid=ImgDetMain"

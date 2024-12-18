@@ -18,11 +18,20 @@ function App() {
          <Route path='signup' element={<Signup/>}/>
          <Route path='hotels' element={<Hotels/>}/>
       </Routes>
+<<<<<<< HEAD
     
      </Router>
    
     <Footer/> 
     
+=======
+     </Router>
+    <TripPlanner/> 
+     <Try/>
+   <FeaturesSection/>
+    <PromoSection/> 
+    <Footer/>
+>>>>>>> 7658fff826efdcf12e53219480e4d4ed11daca13
     </>
   );
 }

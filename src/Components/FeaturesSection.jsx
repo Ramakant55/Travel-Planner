@@ -2,14 +2,14 @@ import React from 'react';
 
 const FeaturesSection = () => {
   return (
-    <div className=" py-16 px-8">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+    <div className="md:py-16 py-6 md:px-8">
+      <h2 className="md:text-3xl text-xl p-5 font-bold text-center text-gray-800 mb-12">
         Features to replace all your other tools
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
         {/* Feature 1 */}
-        <div className="text-center w-60">
+        <div className="text-center w-60  md:p-0 p-6">
           <img src="https://wanderlog.com/assets/MainFeatureTiles__addPlaces.png" alt="Add places" className="mx-auto mb-4" />
           <h3 className="text-xl font-semibold mb-2">Add places from guides with 1 click</h3>
           <p className="text-gray-600">
@@ -68,7 +68,7 @@ const FeaturesSection = () => {
       <div className="mt-16">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-5">
           Plan like a Pro
-          <p className='text-xl md:w-[50%] w-80 mt-5 md:ml-96 ml-12'>Unlock premium features like offline access, unlimited attachments, flight deals, export to Google maps, and <a href='#' className='underline text-blue-500'>much more</a> </p>
+          <p className='text-xl md:w-[50%] w-80 mt-5 p-3 md:ml-96 mx-auto'>Unlock premium features like offline access, unlimited attachments, flight deals, export to Google maps, and <a href='#' className='underline text-blue-500'>much more</a> </p>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
           {/* Pro Feature 1 */}
