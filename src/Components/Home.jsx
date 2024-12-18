@@ -9,7 +9,7 @@ const Home = () => {
           <div className="text-orange-500 font-bold text-2xl transition-transform duration-300 ease-in-out hover:scale-150">Travel Planner</div>
           <div className="hidden md:flex items-center space-x-10 text-xl font-bold">
             <Link to="/" className="text-gray-700 hover:text-orange-500  transform transition ease duration-300 hover:translate-x-[-8px]">Home</Link>
-            <Link to="/AllTours" className="text-gray-700 hover:text-orange-500  transform transition duration-300 hover:translate-x-[-8px]">Travel Guides</Link>
+            <Link to="/alltours" className="text-gray-700 hover:text-orange-500  transform transition duration-300 hover:translate-x-[-8px]">Travel Guides</Link>
             <Link to="/hotels" className="text-gray-700 hover:text-orange-500 transform transition duration-300 hover:translate-x-[-8px]">Hotels</Link>
           </div>
           <div className="hidden md:flex items-center space-x-4">
