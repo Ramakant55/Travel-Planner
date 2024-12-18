@@ -24,8 +24,7 @@ const Footer = () => {
             © 2024 <a href="#" className="text-orange-500">Travel Planner</a>. All Rights Reserved
           </p>
         </div>
-
-        <div>
+   <div className="">
           <h3 className="text-gray-800 font-semibold mb-4">Discover</h3>
           <ul className="space-y-2">
   <li>
@@ -53,8 +52,6 @@ const Footer = () => {
     </a>
   </li>
 </ul>
-
-
         </div>
 
         <div>

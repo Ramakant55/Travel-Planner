@@ -21,8 +21,8 @@ const Login = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white rounded-lg shadow-lg w-[30rem] h-[40rem] p-6 relative">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+      <div className="bg-white rounded-lg shadow-lg md:w-[30rem] w-[20rem] md:h-[40rem] p-6 relative">
         {/* Close Button */}
         <button
           className="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
@@ -106,7 +106,7 @@ const Login = () => {
         {/* Sign Up Link */}
         <p className="text-center text-sm text-gray-600 mt-6">
           Don't have an account yet?{" "}
-          <a href="#" className="text-blue-600 hover:underline">
+          <a href="Signup" className="text-blue-600 hover:underline">
             Sign up
           </a>
         </p>
