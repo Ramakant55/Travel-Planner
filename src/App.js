@@ -3,28 +3,24 @@ import { Route,BrowserRouter as Router, Routes } from 'react-router-dom';
 import Home from './Components/Home';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
-import FeaturesSection from './Components/FeaturesSection';
-import PromoSection from './Components/PromoSection';
-import Try from './Components/Try';
-import TripPlanner from './Components/TripPlanner';
 import Footer from './Components/Footer';
+import Hotels from './Components/Hotels';
+import Homepage from './Components/Homepage';
 
 function App() {
   return (
     <>
-    <Router>
+     <Router>
       <Home/>
        <Routes>
+        <Route path='/' element={<Homepage/>}/>
          <Route path='login' element={<Login/>}/>
          <Route path='signup' element={<Signup/>}/>
-      </Routes>
-     </Router>
-    <TripPlanner/> 
-     <Try/>
-   <FeaturesSection/>
-    <PromoSection/> 
-    <Footer/>
-    </>
+         <Route path='hotels' element={<Hotels/>}/>
+      </Routes>    
+     </Router> 
+    <Footer/> 
+      </>
   );
 }
 
