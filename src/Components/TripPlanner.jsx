@@ -140,12 +140,8 @@ const TravelPlanner = () => {
             <option>4 Guests</option>
           </select>
         </div>
-<<<<<<< HEAD
         <button className="bg-red-500  transform transition ease duration-300 hover:translate-y-[-4px] hover:bg-red-600 text-white px-3 py-2 mt-5 rounded-md font-medium" 
          onClick={handleSearch} >
-=======
-        <button className="bg-red-500 transform transition ease duration-300 hover:translate-y-[-4px] hover:bg-red-600 text-white px-3 py-2 mt-5 rounded-md font-medium">
->>>>>>> 7658fff826efdcf12e53219480e4d4ed11daca13
           Search
         </button>
       </div>
