@@ -6,7 +6,9 @@ const TravelPlanner = () => {
   const [location, setLocation] = useState('');
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate(); 
+
+
 
   // Fetch weather data dynamically based on location
   const fetchWeather = async (city) => {
@@ -140,6 +142,10 @@ const TravelPlanner = () => {
             <option>4 Guests</option>
           </select>
         </div>
+
+        <button className="bg-red-500 transform transition ease duration-300 hover:translate-y-[-4px] hover:bg-red-600 text-white px-3 py-2 mt-5 rounded-md font-medium"
+         onClick={handleSearch}>
+
         <button className="bg-red-500  transform transition ease duration-300 hover:translate-y-[-4px] hover:bg-red-600 text-white px-3 py-2 mt-5 rounded-md font-medium" 
          onClick={handleSearch} >
           Search
