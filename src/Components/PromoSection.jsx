@@ -7,7 +7,7 @@ const PromoSection = () => {
         {/* Text Section */}
         <div className="lg:w-1/2 w-full text-center lg:text-left mt-10 lg:mt-0">
           <h2 className="text-3xl font-bold text-gray-800">
-            Plan on the go with our <span className="text-blue-600">free travel app</span>
+            Plan on the go with our <span className="text-blue-600">freeee travel app</span>
           </h2>
           <div className="flex justify-center lg:justify-start space-x-4 my-6">
             <img
