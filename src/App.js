@@ -6,11 +6,13 @@ import Signup from './Components/Signup';
 import Footer from './Components/Footer';
 import AllTours from './Components/AllTours';
 import Helper from './Components/Helper';
+import Hotels from './Components/Hotels';
+import Homepage from './Components/Homepage';
 
 function App() {
   return (
     <>
-    <Router>
+     <Router>
       <Home/>
        <Routes>
         <Route path="/" element={<Helper />} />

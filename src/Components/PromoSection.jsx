@@ -2,12 +2,13 @@ import React from "react";
 
 const PromoSection = () => {
   return (
-    <section className="bg-blue-50 py-10 mt-40">
+    <section className="bg-blue-50 py-10 md:mt-40">
       <div className="container mx-auto px-6 lg:px-20 flex flex-col-reverse lg:flex-row items-center">
         {/* Text Section */}
         <div className="lg:w-1/2 w-full text-center lg:text-left mt-10 lg:mt-0">
           <h2 className="text-3xl font-bold text-gray-800">
-            Plan on the go with our new <span className="text-blue-600">freeee travel app</span>
+            Plan on the go with our new <span className="text-blue-600">free
+               Travel app</span>
           </h2>
           <div className="flex justify-center lg:justify-start space-x-4 my-6">
             <img

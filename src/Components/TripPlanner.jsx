@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const TravelPlanner = () => {
   const [location, setLocation] = useState('');
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate(); 
+
+
 
   // Fetch weather data dynamically based on location
   const fetchWeather = async (city) => {
@@ -23,6 +27,8 @@ const TravelPlanner = () => {
     }
   };
 
+  //search conditions
+ 
   // Activity suggestion logic
   const getActivitySuggestion = () => {
     if (!weather) return '';
@@ -45,12 +51,18 @@ const TravelPlanner = () => {
     }
   }, [location]);
 
+  const handleSearch = () => {
+    if (location) {
+      navigate('/hotels', { state: { location } }); // Navigate with location data
+    } else {
+      alert('Please enter a location to search for hotels.');
+    }
+  };
+
   return (
     <div>
     <div
-      className=" bg-cover bg-center text-white"
-      
-      >
+      className=" bg-cover bg-center text-white">
     
       {/* Hero Section */}
       <div className="h-72 -mt-44 flex flex-col justify-center items-center text-center bg-opacity-50 bg-black shadow-black shadow-md"
@@ -64,7 +76,7 @@ const TravelPlanner = () => {
       </div>
 
       {/* Input & Weather Section */}
-      <div className="max-w-4xl mx-auto p-6 bg-blue-200 shadow-md shadow-black rounded-lg -mt-16 relative text-gray-800">
+      <div className="md:max-w-4xl max-w-80 mx-auto p-6 bg-blue-200 shadow-md shadow-black rounded-lg -mt-16 relative text-gray-800">
         {/* Location Input */}
         <div className="text-center mb-6">
           <input
@@ -72,7 +84,7 @@ const TravelPlanner = () => {
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             placeholder="Enter location"
-            className="p-3 border border-gray-300 rounded-md w-full max-w-md mx-auto focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="p-3 border border-gray-300 rounded-md md:w-full md:max-w-md mx-auto focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
@@ -95,9 +107,9 @@ const TravelPlanner = () => {
     <div className="w-full h-96 -mt-32">
 
     {/* Content */}
-    <div className="text-center text-white flex flex-col justify-center items-center mt-40 px-4">
+    <div className="md:text-center text-white md:flex md:flex-col justify-center items-center mt-40 md:px-4">
       {/* Search Box */}
-      <div className="bg-blue-200 text-gray-700 p-4 rounded-lg shadow-md shadow-black w-full max-w-4xl flex justify-between items-center">
+      <div className="bg-blue-200 text-gray-700 p-4 rounded-lg shadow-md shadow-black w-full md:max-w-4xl max-w-80 mx-auto md:flex justify-between items-center">
         <div className="flex flex-1 flex-col px-2">
           <label className="text-sm font-medium">Location</label>
           <input
@@ -130,14 +142,19 @@ const TravelPlanner = () => {
             <option>4 Guests</option>
           </select>
         </div>
-        <button className="bg-red-500  transform transition ease duration-300 hover:translate-y-[-4px] hover:bg-red-600 text-white px-3 py-2 mt-5 rounded-md font-medium">
+
+        <button className="bg-red-500 transform transition ease duration-300 hover:translate-y-[-4px] hover:bg-red-600 text-white px-3 py-2 mt-5 rounded-md font-medium"
+         onClick={handleSearch}>
+
+        <button className="bg-red-500  transform transition ease duration-300 hover:translate-y-[-4px] hover:bg-red-600 text-white px-3 py-2 mt-5 rounded-md font-medium" 
+         onClick={handleSearch} >
           Search
         </button>
       </div>
     </div>
 
     {/* Features Section */}
-    <div className="relative z-10 py-12 px-4 md:px-16 flex justify-between">
+    <div className="relative z-10 py-12 px-8 md:px-16 md:flex justify-between">
       {/* Feature 1 */}
       <div className="text-center flex-1">
         <div className="text-red-500 text-5xl mb-4">🌴</div>
@@ -149,7 +166,7 @@ const TravelPlanner = () => {
 
       {/* Feature 2 */}
       <div className="text-center flex-1">
-        <div className="text-green-500 text-5xl mb-4">💰</div>
+        <div className="text-green-500 text-5xl mb-4 md:mt-0 mt-5">💰</div>
         <h3 className="font-semibold text-lg mb-2">Enjoy deals & delights</h3>
         <p className="text-gray-500 text-sm">
           Quality activities. Great prices. Save more, travel free.
@@ -158,7 +175,7 @@ const TravelPlanner = () => {
 
       {/* Feature 3 */}
       <div className="text-center flex-1">
-        <div className="text-blue-500 text-5xl mb-4">🌍</div>
+        <div className="text-blue-500 text-5xl mb-4  md:mt-0 mt-5">🌍</div>
         <h3 className="font-semibold text-lg mb-2">Exploring made easy</h3>
         <p className="text-gray-500 text-sm">
           Book last minute, skip lines, and cancel free.
@@ -167,7 +184,7 @@ const TravelPlanner = () => {
 
       {/* Feature 4 */}
       <div className="text-center flex-1">
-        <div className="text-orange-500 text-5xl mb-4">⭐</div>
+        <div className="text-orange-500 text-5xl mb-4  md:mt-0 mt-5">⭐</div>
         <h3 className="font-semibold text-lg mb-2">Travel you can trust</h3>
         <p className="text-gray-500 text-sm">
           Reliable reviews & support at every step.
