@@ -8,6 +8,12 @@ const Home = () => {
     <div className="min-h-screen bg-white">
       <nav className="bg-white shadow-md md:py-4 py-6">
         <div className="container mx-auto flex items-center justify-between px-4">
+
+          <div className="text-orange-500 font-bold text-2xl transition-transform duration-300 ease-in-out hover:scale-150">Travel Planner</div>
+          <div className="hidden md:flex items-center space-x-10 text-xl font-bold">
+            <Link to="/" className="text-gray-700 hover:text-orange-500  transform transition ease duration-300 hover:translate-x-[-8px]">Home</Link>
+            <Link to="/alltours" className="text-gray-700 hover:text-orange-500  transform transition duration-300 hover:translate-x-[-8px]">Travel Guides</Link>
+            <Link to="/hotels" className="text-gray-700 hover:text-orange-500 transform transition duration-300 hover:translate-x-[-8px]">Hotels</Link>
           <div className="text-orange-500 font-bold text-2xl md:transition-transform md:duration-300 md:ease-in-out md:hover:scale-150">
             Travel Planner
           </div>
@@ -30,6 +36,7 @@ const Home = () => {
             >
               Hotels
             </Link>
+
           </div>
           <div className="hidden md:flex items-center space-x-4">
             <Link to="/login" className="text-gray-700 hover:text-orange-500">

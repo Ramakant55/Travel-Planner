@@ -4,6 +4,8 @@ import Home from './Components/Home';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
 import Footer from './Components/Footer';
+import AllTours from './Components/AllTours';
+import Helper from './Components/Helper';
 import Hotels from './Components/Hotels';
 import Homepage from './Components/Homepage';
 
@@ -13,14 +15,14 @@ function App() {
      <Router>
       <Home/>
        <Routes>
-        <Route path='/' element={<Homepage/>}/>
+        <Route path="/" element={<Helper />} />
          <Route path='login' element={<Login/>}/>
          <Route path='signup' element={<Signup/>}/>
-         <Route path='hotels' element={<Hotels/>}/>
-      </Routes>    
-     </Router> 
-    <Footer/> 
-      </>
+         <Route path='alltours' element={<AllTours/>}/>
+      </Routes>
+     <Footer/>
+     </Router>
+    </>
   );
 }
 
